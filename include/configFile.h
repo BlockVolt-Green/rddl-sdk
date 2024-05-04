@@ -4,7 +4,7 @@
 #define DEFAULT_API_TEXT                "https://testnet-api.rddl.io"
 
 #define SETTINGS_API_FILE          "planetmintapi"
-#define SETTINGS_API_FILE          "nexusapi"
+#define SETTINGS_NEXUS_FILE          "nexusapi"
 #define SETTINGS_PERIODICITY_FILE  "notarizationperiodicity"
 #define SETTINGS_CHAINID_FILE      "planetmintchainid"
 #define SETTINGS_DENOM_FILE        "planetmintdenom"
