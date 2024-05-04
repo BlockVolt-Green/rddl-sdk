@@ -2,6 +2,7 @@
 #define DEFAULT_CHAINID_TEXT            "planetmint-testnet-1"
 #define DEFAULT_PERIODICITY_TEXT        "3600"
 #define DEFAULT_API_TEXT                "https://testnet-api.rddl.io"
+#define DEFAULT_NEXUS_TEXT              "null"
 
 #define SETTINGS_API_FILE          "planetmintapi"
 #define SETTINGS_NEXUS_FILE          "nexusapi"

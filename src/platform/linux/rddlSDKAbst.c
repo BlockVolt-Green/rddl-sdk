@@ -319,7 +319,7 @@ case SDK_SET_PLANETMINT_API:
 case SDK_SET_NEXUS_API:
     if( strlen( sdk_nexusapi) == 0 ){
       if( !readfile(SETTINGS_NEXUS_FILE, (uint8_t*)sdk_nexusapi, 100) )
-        strcpy(sdk_nexusapi, DEFAULT_NEXUS_API_TEXT);
+        strcpy(sdk_nexusapi, DEFAULT_NEXUS_TEXT);
     }
     return sdk_nexusapi;
 case SDK_SET_PLANETMINT_CHAINID:
