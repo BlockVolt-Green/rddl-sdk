@@ -44,6 +44,7 @@ char sdk_ext_pub_key_liquid[EXT_PUB_KEY_SIZE+1] = {0};
 char sdk_machineid_public_key_hex[33*2+1] = {0};
 
 char sdk_planetmintapi[100] = {0};
+char sdk_nexusapi[100] = {0};
 char sdk_chainid[30] = {0};
 char sdk_denom[20] = {0};
 

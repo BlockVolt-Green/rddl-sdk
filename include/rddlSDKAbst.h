@@ -43,6 +43,7 @@ extern char sdk_machineid_public_key_hex[33*2+1];
 
 
 extern char sdk_planetmintapi[100];
+extern char sdk_nexusapi[100];
 extern char sdk_chainid[30];
 extern char sdk_denom[20];
 

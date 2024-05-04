@@ -62,6 +62,7 @@ char sdk_machineid_public_key_hex[33*2+1] = {0};
 
 char sdk_periodicity[20] = {0};
 char sdk_planetmintapi[100] = {0};
+char sdk_nexusapi[100] = {0};
 
 char sdk_chainid[30] = {0};
 char sdk_denom[20] = {0};
@@ -315,6 +316,12 @@ case SDK_SET_PLANETMINT_API:
         strcpy(sdk_planetmintapi, DEFAULT_API_TEXT);
     }
     return sdk_planetmintapi;
+case SDK_SET_NEXUS_API:
+    if( strlen( sdk_nexusapi) == 0 ){
+      if( !readfile(SETTINGS_NEXUS_FILE, (uint8_t*)sdk_nexusapi, 100) )
+        strcpy(sdk_nexusapi, DEFAULT_NEXUS_API_TEXT);
+    }
+    return sdk_nexusapi;
 case SDK_SET_PLANETMINT_CHAINID:
     if( strlen( sdk_chainid) == 0 ){
       if( !readfile(SETTINGS_CHAINID_FILE, (uint8_t*)sdk_chainid, 30) )
@@ -342,6 +349,10 @@ case SDK_SET_PLANETMINT_API:
     retValue = rddl_writefile( SETTINGS_API_FILE, (uint8_t*)replacementText, strlen(replacementText));
     memset(sdk_planetmintapi,0,100);
     break;  
+case SDK_SET_NEXUS_API:   
+    retValue = rddl_writefile( SETTINGS_NEXUS_FILE, (uint8_t*)replacementText, strlen(replacementText));
+    memset(sdk_nexusapi,0,100);
+    break; 
 case SDK_SET_PLANETMINT_CHAINID:
     retValue = rddl_writefile( SETTINGS_CHAINID_FILE, (uint8_t*)replacementText, strlen(replacementText));
     memset(sdk_chainid,0,30);
